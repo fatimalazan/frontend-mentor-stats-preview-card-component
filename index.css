@@ -13,6 +13,12 @@ body {
     height: 100%;
 }
 
+picture {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
 .container {
     width: 70vw;
     height: 60vh;
@@ -73,17 +79,18 @@ body {
 }
 
 .card-preview {
-    width: 50%;;
+    width: 50%;
+    background-color: hsl(277, 64%, 61%);
+    border-radius: 0 8px 8px 0;
 }
 
 .card-image {
     width: 100%;
-    height: 60vh;
+    height: 100%;
     border-radius: 0 8px 8px 0;
-    background: linear-gradient(rgba(170, 50, 219, .5), rgba(170, 50, 219, .5)), url('images/image-header-desktop.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
+    mix-blend-mode: multiply;
+    object-fit: cover;
+    opacity: .7;
 }
 
 @media only screen and (max-width: 1311px) {
@@ -107,9 +114,12 @@ body {
         width: 100%;
     }
 
+    .card-preview {
+        border-radius: 8px 8px 0 0;
+    }
+
     .card-image {
         border-radius: 8px 8px 0 0;
-        background-position: top;
     }
 
     .card-details {
@@ -123,10 +133,6 @@ body {
         width: 80vw;
     }
 
-    .card-image {
-        height: 50vh;
-    }
-
     .card-details {
         padding: 50px 20px;
     }
@@ -136,15 +142,6 @@ body {
 @media only screen and (max-width: 500px){
     .container {
         width: 90vw;
-    }
-
-    .card-image {
-        width: 100%;
-        height: 40vh;
-        background: linear-gradient(rgba(170, 50, 219, .5), rgba(170, 50, 219, .5)), url('images/image-header-mobile.jpg');
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center center;
     }
 
     .card-details {

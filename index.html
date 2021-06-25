@@ -33,7 +33,12 @@
                     </ul>
                 </div>
                 <div class="card-preview">
-                    <div class="card-image"></div>
+                    <picture>
+                        <source sizes="(max-width: 500px)" srcset="images/image-header-mobile.jpg">
+                        <source sizes="(max-width: 1179px)" srcset="images/image-header-desktop.jpg">
+                        <source srcset="images/image-header-desktop.jpg">
+                        <img src="images/image-header-desktop.jpg" class="card-image">
+                    </picture>
                 </div>
             </div>
         </div>
